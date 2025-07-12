@@ -1,7 +1,3 @@
-from fastapi import FastAPI
-
-app = FastAPI()
-
 import redis
 from fastapi import FastAPI
 
