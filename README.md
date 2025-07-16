@@ -22,6 +22,7 @@ Each folder contains practical examples, configs, and notes.
 ├── env-configs/           # .env, Pydantic Settings, secret management
 ├── database-ops/          # Pooling, migrations, backups
 ├── ci-cd/                 # GitHub Actions, pipelines, deployments
+├── scraping/              # httpx, BeautifulSoup, async scraping patterns
 └── snippets/              # Misc helpers and reusable patterns
 
 ```
@@ -44,7 +45,6 @@ You can:
 - Copy snippets into new backend projects
 - Expand each section as you learn more
 
-
 ---
 
 ## Topics Covered (WIP)
@@ -58,7 +58,10 @@ You can:
 - Prometheus + Grafana basics
 - Structured logging
 - Rate limiting logic
+- Async Web Scraping with httpx
+- HTML parsing with BeautifulSoup
+- Rate-limiting scraper requests
 
 ---
 
-> Feel free to fork, copy, or adapt for your own backend journey.
+*Created and maintained by RM Villa.*
