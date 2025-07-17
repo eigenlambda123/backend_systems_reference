@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+import csv
+import json
 
 URL = "https://www.python.org/jobs/"
 page = requests.get(URL)
@@ -29,3 +31,19 @@ for job_title, job_link in ml_jobs:
     print(job_title)
     print(f"Apply here: https://www.python.org/{job_link}\n")
 
+
+# Save the ML jobs to a CSV file
+with open("ml_jobs.csv", "w", newline='', encoding="utf-8") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["Job Title", "Job Link"])
+    for job_title, job_link in ml_jobs:
+        writer.writerow([job_title, f"https://www.python.org/{job_link}"])
+
+
+# Save the ML jobs to a JSON file
+ml_jobs_data = [
+    {"title": job_title, "link": f"https://www.python.org/{job_link}"}
+    for job_title, job_link in ml_jobs
+]
+with open("ml_jobs.json", "w", encoding="utf-8") as jsonfile:
+    json.dump(ml_jobs_data, jsonfile, ensure_ascii=False, indent=2)
