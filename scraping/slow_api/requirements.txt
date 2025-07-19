@@ -1,0 +1,6 @@
+Deprecated==1.2.18
+limits==5.4.0
+packaging==25.0
+slowapi==0.1.9
+typing_extensions==4.14.1
+wrapt==1.17.2
